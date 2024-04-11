@@ -1,0 +1,6 @@
+[book]
+authors = ["Jay"]
+language = "ko"
+multilingual = false
+src = "src"
+title = "맞왜틀 오답노트"
