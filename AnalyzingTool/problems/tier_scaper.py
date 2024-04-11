@@ -3,6 +3,11 @@ from bs4 import BeautifulSoup
 import json
 import time
 
+'''
+https://www.acmicpc.net/ 사이트에 트래픽을 발생시키지 않습니다.
+solved.ac 사이트에서 간단하게 티어 별 문제만 골라내는 토이 스크레이퍼 코드입니다.
+'''
+
 PAGE_SIZE = 50
 CLASS = 'css-q9j30p'
 

@@ -68,35 +68,3 @@ const finalObject = {
 
 // JSON 객체 출력
 console.log(JSON.stringify(finalObject, null, 2));
-
-function downloadJSON(data, filename) {
-    // JSON 데이터를 문자열로 변환
-    const jsonStr = JSON.stringify(data, null, 2);
-
-    // Blob 객체 생성
-    const blob = new Blob([jsonStr], {type: 'application/json'});
-
-    // URL.createObjectURL()을 사용하여 Blob 객체를 URL로 변환
-    const url = URL.createObjectURL(blob);
-
-    // 링크 생성
-    let link = document.createElement('a');
-    link.href = url;
-    link.download = filename;
-
-    // 링크 클릭 및 다운로드
-    link.click();
-
-    // 사용이 끝난 후에는 URL.revokeObjectURL()을 호출하여 메모리 누수 방지
-    URL.revokeObjectURL(url);
-}
-
-const url = window.location.href;
-
-let article_id = url.split('/').pop();
-
-// 파일 이름
-let filename = article_id + '.json';
-
-// JSON 파일 다운로드
-downloadJSON(finalObject, filename);
