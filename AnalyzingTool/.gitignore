@@ -153,3 +153,5 @@ cython_debug/
 
 datas/
 pages/data/
+pages/output/
+pages/problems/

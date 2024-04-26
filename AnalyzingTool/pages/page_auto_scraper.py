@@ -11,7 +11,7 @@ https://www.acmicpc.net/ 사이트에 트래픽을 발생시킵니다.
 어쨌든 쓰지 마세요.
 '''
 
-for i in range(45,10100):
+for i in range(135670,145100):
 
     ARTICLE_ID = i
 
@@ -35,7 +35,7 @@ for i in range(45,10100):
         with open(f'data/{i}.html', 'w', encoding='utf-8') as f:
             f.write(response.text)
 
-        print('HTML 파일이 성공적으로 저장되었습니다.')
+        print(f'{ARTICLE_ID}번 HTML 파일이 성공적으로 저장되었습니다.')
 
     else:
         print(f'Error: {response.status_code}')
